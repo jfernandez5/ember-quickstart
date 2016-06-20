@@ -6,6 +6,13 @@ module.exports = function(environment) {
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
+    contentSecurityPolicy: {
+      'connect-src': "'self' wss://*.firebaseio.com"
+    },
+    firebase: {
+      apiKey : '1rSGo5hevxchp22SO1vTEAGbLBsjao0B7oyl8pU2',
+      databaseURL: 'https://javierapps.firebaseio.com'
+    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
