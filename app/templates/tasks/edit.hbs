@@ -1,1 +1,17 @@
-Edit !
+<form>
+  <div class="form-group">
+    <label for="title">Title</label>
+    {{input type="text" class="form-control" value=model.title
+    	placeholder="Add Task..."}}
+  </div>
+  <div class="form-group">
+    <label for="duedate">Due Date</label>
+    {{bootstrap-datepicker class="form-control" readonly="readonly" format="yyyy-mm-dd" autoclose=true value=model.date}}
+  </div>
+  <div class="form-group">
+  	<label>Description</label>
+  	{{textarea class="form-control" value=model.description
+  		placeholder="Describe a task.."}}
+  </div>
+  <button {{action "editTask" model.id}} type="submit" class="btn btn-primary">Update</button>
+</form>

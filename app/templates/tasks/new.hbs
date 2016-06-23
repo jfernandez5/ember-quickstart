@@ -6,12 +6,12 @@
   </div>
   <div class="form-group">
     <label for="duedate">Due Date</label>
-    {{input type="date" class="form-control" value=date}}
+    {{bootstrap-datepicker class="form-control" readonly="readonly" format="yyyy-mm-dd" autoclose=true value=date}}
   </div>
   <div class="form-group">
   	<label>Description</label>
   	{{textarea class="form-control" value=description
   		placeholder="Describe a task.."}}
   </div>
-  <button {{action "addTask"}} type="submit" class="btn btn-primary">Submit</button>
+  <button {{action "addTask"}} type="submit" class="btn btn-primary">Create</button>
 </form>

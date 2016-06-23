@@ -7,13 +7,17 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">AppEmber</a>
+      <a class="navbar-brand" href="">AppEmber</a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-      	<li>{{#link-to 'tasks'}}Home{{/link-to}}</li>		
-      	<li>{{#link-to 'tasks.new'}}New Task{{/link-to}}</li>
-        <li>{{#link-to "tasks.edit"}}Edit Task{{/link-to}}</li>
+      	{{#link-to 'tasks' tagName="li"}}
+          <a href="#">Home</a>
+        {{/link-to}}
+        <!--
+      	{{#link-to 'tasks.new' tagName="li"}}
+          <a href="#">New Task</a>
+        {{/link-to}}-->
       </ul>
     </div><!--/.nav-collapse -->
   </div>
@@ -23,6 +27,7 @@
 
   <div class="row">
   	<div class="col-md-12">
+      {{#link-to "tasks.new" class="btn btn-default margin-bottom20"}}New Task{{/link-to}}
   		{{outlet}}
   	</div>
   </div>
